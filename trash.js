@@ -51,7 +51,7 @@ function translate(text, to) {
   });
   return string.substring(0, string.length - 4);
 }
-document.querySelector("textarea#aintgonnalive").onclick = () => {
+document.querySelector("button#aintgonnalive").onclick = () => {
   let input = document.querySelector("#hell").value;
   let code = input.split(" ")[0];
   let text = input.substring(code.length);
