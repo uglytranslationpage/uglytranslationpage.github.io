@@ -14,5 +14,11 @@
     <p id="res">N/A</p>
     <small>Use <b>Shift+Enter</b> to break a line<br /><b>Example</b>: ru You guys suck</small>
     <script type="text/javascript" src="trash.js"/></script>
+    <script type="text/javascript">
+      document.body.innerHTML += `<h2>Supported Languages:</h2>`;
+      langs.forEach(lang => {
+        document.body.innerHTML += `<li>${lang.name}</li>`;
+      });
+    </script>
   </body>
 </html>
