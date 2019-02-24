@@ -45,11 +45,12 @@ function translate(text, to) {
   let response = rawRequest(text, to);
   let json = JSON.parse(response);
   let first = json[0];
+  delete first[first.length - 1];
   let string = "";
   first.forEach((array) => {
     string += array[0];
   });
-  return string.substring(0, string.length - 4);
+  return string;
 }
 let getTranslated = () => {
   let input = document.querySelector("#hell").value;
