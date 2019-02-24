@@ -13,14 +13,13 @@
     <button type="submit" id="aintgonnalive">die</button>
     <p id="res">N/A</p>
     <small>Use <b>Shift+Enter</b> to break a line<br /><b>Example</b>: ru You guys suck</small>
+    <h2>Supported Languages:</h2>
+    <ul id="langslist"></ul>
     <script type="text/javascript" src="trash.js"/></script>
     <script type="text/javascript">
-      document.body.innerHTML += `<h2>Supported Languages:</h2>\n`;
-      document.body.innerHTML += `<ul>\n`;
       langs.forEach(lang => {
-        document.body.innerHTML += `<li>${lang.name} (${lang.code})</li>\n`;
+        document.querySelector("#langslist").appendChild(`<li>${lang.name} (${lang.code})</li>`);
       });
-      document.body.innerHTML += `</ul>`;
     </script>
   </body>
 </html>
