@@ -59,7 +59,7 @@ let getTranslated = () => {
 };
 document.querySelector("button#aintgonnalive").onclick = getTranslated;
 document.querySelector("textarea#hell").addEventListener('keydown', (e) => {
-  if (e.key === "Enter") {
+  if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
     getTranslated();
   }
