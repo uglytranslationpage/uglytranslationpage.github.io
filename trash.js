@@ -58,7 +58,7 @@ let getTranslated = () => {
   document.querySelector("#res").innerHTML = translate(text, code);
 };
 document.querySelector("button#aintgonnalive").onclick = getTranslated;
-document.querySelector("textarea#hell").onclick = (e) => {
+document.querySelector("textarea#hell").keydown = (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     getTranslated();
