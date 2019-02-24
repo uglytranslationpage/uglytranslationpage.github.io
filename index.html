@@ -18,7 +18,10 @@
     <script type="text/javascript" src="trash.js"/></script>
     <script type="text/javascript">
       langs.forEach(lang => {
-        document.querySelector("#langslist").appendChild(`<li>${lang.name} (${lang.code})</li>`);
+        let list = document.querySelector("#langslist");
+        let element = document.createElement("li");
+        element.appendChild(document.createTextNode(`${lang.name} (${lang.code})`));
+        list.appendChild(element);
       });
     </script>
   </body>
