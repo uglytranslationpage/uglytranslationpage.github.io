@@ -51,9 +51,16 @@ function translate(text, to) {
   });
   return string.substring(0, string.length - 4);
 }
-document.querySelector("button#aintgonnalive").onclick = () => {
+let getTranslated = () => {
   let input = document.querySelector("#hell").value;
   let code = input.split(" ")[0];
   let text = input.substring(code.length);
   document.querySelector("#res").innerHTML = translate(text, code);
+};
+document.querySelector("button#aintgonnalive").onclick = getTranslated;
+document.querySelector("textarea#hell").onclick = (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    getTranslated();
+  }
 }
